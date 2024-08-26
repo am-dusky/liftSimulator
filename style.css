@@ -1,14 +1,14 @@
-/* Reset some default styling */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styling */
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f4f8; /* Soft light blue background */
+  background-color: #f0f4f8; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,9 +20,9 @@ body {
   height: 100vh;
 }
 
-/* Input container styling */
+
 .input-container {
-  background-color: #ffffff; /* White background for contrast */
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,21 +35,21 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
   display: block;
-  color: #333; /* Dark gray text for better readability */
+  color: #333; 
 }
 
 .input-container input[type="text"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #d1d9e6; /* Light blue-gray border */
+  border: 1px solid #d1d9e6; 
   border-radius: 4px;
   font-size: 16px;
 }
 
 .input-container input[type="submit"] {
   padding: 10px 20px;
-  background-color: #3b945e; /* Coral color for submit button */
+  background-color: #3b945e; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -58,45 +58,45 @@ body {
 }
 
 .input-container input[type="submit"]:hover {
-  background-color: #e63946; /* Darker coral for hover effect */
+  background-color: #e63946; 
 }
 
-/* Hidden section */
+
 .hidden {
   display: none;
 }
 
-/* Next section styling */
+
 #nextSection {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #e4f0f6; /* Very light blue for the background */
+  background-color: #e4f0f6;
   overflow: auto;
   padding: 20px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Building container styling */
+
 #building {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 10px;
   position: relative;
-  background-color: #ffffff; /* White background for the building */
+  background-color: #ffffff; 
   border-radius: 8px;
   overflow-x: auto;
 }
 
-/* Floor styling */
+
 .floor {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-bottom: 1px solid #e0e0e0; /* Light gray border */
+  border-bottom: 1px solid #e0e0e0;
   padding: 10px 0;
   position: relative;
   height: 120px;
@@ -106,7 +106,7 @@ body {
 
 .floor-number {
   margin-bottom: 10px;
-  color: #4a4a4a; /* Medium gray for floor numbers */
+  color: #4a4a4a;
 }
 
 .floor button {
@@ -116,7 +116,7 @@ body {
   width: 80px;
   color: #ffffff;
   padding: 5px 2px;
-  background-color: #00897b; /* Teal for buttons */
+  background-color: #00897b;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -125,10 +125,10 @@ body {
 }
 
 .floor button:hover {
-  background-color: #00695c; /* Darker teal for hover effect */
+  background-color: #00695c; 
 }
 
-/* Lift container styling */
+
 .lifts-container {
   display: flex;
   gap: 10px;
@@ -142,8 +142,7 @@ body {
 .lift {
   height: 100px;
   width: 60px;
-  background-color: #65ccb8; /* Amber for lift */
-  /* Orange border */
+  background-color: #65ccb8;
   border-radius: 4px;
   position: relative;
   overflow: hidden;
@@ -152,7 +151,7 @@ body {
   justify-content: center;
 }
 
-/* Door styling */
+
 .lift::before,
 .lift::after {
   content: "";
@@ -160,8 +159,8 @@ body {
   top: 0;
   bottom: 0;
   width: 50%;
-  background-color: #3b945e; /* Purple for doors */
-  border: 2px solid #182628; /* Dark purple border */
+  background-color: #3b945e; 
+  border: 2px solid #182628; 
   transition: transform 2.5s ease-in-out;
   transform-origin: center;
 }
