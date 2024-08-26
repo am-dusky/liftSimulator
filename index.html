@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lift Simulator</title>
+  </head>
+  <body>
+    <div class="input-container">
+      <label for="floor">No of floors</label>
+      <input type="text" id="floor" name="floor" /><br /><br />
+      <label for="lift">No of lifts</label>
+      <input type="text" id="lift" name="lift" /><br /><br />
+      <input type="submit" id="submit" value="Simulate" /><br /><br />
+    </div>
+    <div id="nextSection" class="hidden">
+      <div id="building"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
