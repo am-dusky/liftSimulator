@@ -6,10 +6,10 @@ document.getElementById("submit").addEventListener("click", function () {
   if (numberOfFloor > 0 && numberOfLift > 0) {
     document.getElementById("nextSection").classList.remove("hidden");
 
-    // Clear previous building content
+  
     building.innerHTML = "";
 
-    // Create floors
+
     for (let i = numberOfFloor; i > 0; i--) {
       const floorDiv = document.createElement("div");
       floorDiv.className = "floor";
@@ -35,7 +35,7 @@ document.getElementById("submit").addEventListener("click", function () {
         floorDiv.appendChild(down);
       }
 
-      // Add lifts to ground floor
+   
       if (i === 1) {
         const liftsContainer = document.createElement("div");
         liftsContainer.className = "lifts-container";
@@ -45,7 +45,7 @@ document.getElementById("submit").addEventListener("click", function () {
           liftDiv.className = "lift";
           liftDiv.id = "lift" + j;
           liftDiv.dataset.currentFloor = 1; // Initial floor for lifts
-          // console.log(liftDiv.dataset);
+        
           liftsContainer.appendChild(liftDiv);
         }
 
@@ -84,27 +84,27 @@ function handleButtonClick(event) {
   if (nearestLift) {
     const liftCurrentFloor = parseInt(nearestLift.dataset.currentFloor);
     const distanceToTarget = Math.abs(liftCurrentFloor - targetFloor);
-    nearestLift.dataset.currentFloor = targetFloor; // Update lift's current floor
+    nearestLift.dataset.currentFloor = targetFloor; 
 
-    // Open doors if already on the target floor
+   
     if (liftCurrentFloor === targetFloor) {
       nearestLift.classList.add("open");
       setTimeout(() => {
         nearestLift.classList.remove("open");
-      }, 2500); // Duration of doors open
+      }, 2500); 
       return;
     }
 
-    // Animate lift movement
+   
     nearestLift.style.transition = `transform ${distanceToTarget * 2}s linear`;
-    nearestLift.style.transform = `translateY(-${(targetFloor - 1) * 120}px)`; // Adjust translation to fit within the floor
+    nearestLift.style.transform = `translateY(-${(targetFloor - 1) * 120}px)`; 
 
-    // Open doors once lift reaches target floor
+  
     setTimeout(() => {
       nearestLift.classList.add("open");
       setTimeout(() => {
         nearestLift.classList.remove("open");
-      }, 2500); // Duration of doors open
-    }, distanceToTarget * 2000); // Time for the lift to move
+      }, 2500); 
+    }, distanceToTarget * 2000); 
   }
 }
